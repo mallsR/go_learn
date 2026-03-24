@@ -20,6 +20,25 @@ func Hello(name string) (string, error) {
 	return message, nil                          // 这里的nil表示没有错误发生.
 }
 
+// Hellos 返回一个map，该地图将每个已命名的人员
+// 与问候消息相关联.
+func Hellos(names []string) (map[string]string, error) { // 以下语法初始化map：make(map[key-type]value-type
+	// 将名称与消息关联的map.
+	messages := make(map[string]string)
+	// 遍历接收到的名称切片，调用
+	// Hello 函数为每个名字获取一条消息.
+	for _, name := range names {
+		message, err := Hello(name)
+		if err != nil {
+			return nil, err
+		}
+		// 在map中，将检索到的消息与
+		// 名称相关联.
+		messages[name] = message
+	}
+	return messages, nil
+}
+
 // init 为函数中使用的变量设置初始值.
 // 添加 init 函数以使用当前时间为rand包设定种子。
 // Go 在初始化全局变量后，在程序启动时自动执行 init 函数。
