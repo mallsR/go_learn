@@ -17,7 +17,7 @@ func main() {
 	log.SetPrefix("greetings: ") // 这里的前缀"greetings: "将被添加到每条日志消息的开头.
 	log.SetFlags(0)              // 这里的0表示禁用所有默认的日志标志.
 
-	message, err := greetings.Hello("")
+	message, err := greetings.Hello("5000")
 	// 如果返回错误，则将其打印到控制台并
 	// 退出程序.
 	if err != nil {

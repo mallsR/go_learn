@@ -12,4 +12,4 @@ require (
 	rsc.io/sampler v1.3.0 // indirect
 )
 
-replace go_learn/greetings => ./greetings	// 由于go_learn/greetings模块尚未发布到存储库，所以将其模块路径重定向到本地目录。
+replace go_learn/greetings => ./greetings	// 由于go_learn/greetings模块尚
