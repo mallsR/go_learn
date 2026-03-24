@@ -8,8 +8,9 @@ require (
 )
 
 require (
-	golang.org/x/text v0.0.0-20170915032832-14c0d48ead0c // indirect
+	github.com/duke-git/lancet/v2 v2.3.9
+	golang.org/x/text v0.9.0 // indirect
 	rsc.io/sampler v1.3.0 // indirect
 )
 
-replace go_learn/greetings => ./greetings	// 由于go_learn/greetings模块尚
+replace go_learn/greetings => ./greetings // 由于go_learn/greetings模块尚
